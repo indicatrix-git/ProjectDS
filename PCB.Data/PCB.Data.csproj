@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA308ACF-FC2E-4035-905E-4FF5A1CE2D47}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PCB.Data</RootNamespace>
+    <AssemblyName>PCB.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Devart.Data, Version=5.0.1545.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Devart.Data.PostgreSql, Version=7.6.753.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Devart.Data.PostgreSql.Entity.EF6, Version=7.6.753.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress 14.1\Components\Bin\Framework\DevExpress.XtraEditors.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomObjects\NabidkaGridRow.cs" />
+    <Compile Include="CustomObjects\ObjednavkaGridRow.cs" />
+    <Compile Include="CustomObjects\TPVGridRow.cs" />
+    <Compile Include="CustomObjects\VyrobaGridRow.cs" />
+    <Compile Include="Data\KvalitaNeshody.cs" />
+    <Compile Include="Data\KvalitaOpravy.cs" />
+    <Compile Include="Data\prava.cs" />
+    <Compile Include="Data\produkt_stav_button.cs" />
+    <Compile Include="Data\pruvodka_stav.cs" />
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="CustomObjects\Cenik.cs" />
+    <Compile Include="CustomObjects\CenikContext.cs" />
+    <Compile Include="CustomObjects\KontrolaItem.cs" />
+    <Compile Include="CustomObjects\motivy.cs" />
+    <Compile Include="CustomObjects\nabidkaCenikRadka.cs" />
+    <Compile Include="CustomObjects\NazevDPS.cs" />
+    <Compile Include="Data\barva.cs" />
+    <Compile Include="Data\produkt_poznamka.cs" />
+    <Compile Include="Data\zakaznik.cs" />
+    <Compile Include="Data\cena_typ.cs" />
+    <Compile Include="Data\cenik.cs" />
+    <Compile Include="CustomObjects\CenikRadka.cs" />
+    <Compile Include="Data\cenik_hodnota.cs" />
+    <Compile Include="Data\cenik_polozka.cs" />
+    <Compile Include="CustomObjects\CTermin.cs" />
+    <Compile Include="Data\dph.cs" />
+    <Compile Include="Data\faktura.cs" />
+    <Compile Include="Data\faktura_polozka.cs" />
+    <Compile Include="CustomObjects\ItemPCB.cs" />
+    <Compile Include="CustomObjects\KapacitaTabulka.cs" />
+    <Compile Include="CustomObjects\kapacitaVyroby.cs" />
+    <Compile Include="Data\faktura_polozka_typ.cs" />
+    <Compile Include="Data\faktura_stav.cs" />
+    <Compile Include="Data\faktura_tpv_typ.cs" />
+    <Compile Include="Data\klice.cs" />
+    <Compile Include="Data\material.cs" />
+    <Compile Include="Data\motiv_typ.cs" />
+    <Compile Include="Data\nabidka_polozka.cs" />
+    <Compile Include="Data\nabidka_stav.cs" />
+    <Compile Include="Data\objednavka_polozka.cs" />
+    <Compile Include="Data\oddeleni.cs" />
+    <Compile Include="Data\operace.cs" />
+    <Compile Include="Data\plosny_spoj_druh.cs" />
+    <Compile Include="Data\plosny_spoj_specifikace.cs" />
+    <Compile Include="Data\plosny_spoj_specifikace_typ.cs" />
+    <Compile Include="Data\postup.cs" />
+    <Compile Include="Data\poznamka.cs" />
+    <Compile Include="Data\prava_hodnota.cs" />
+    <Compile Include="Data\prava_uzivatel.cs" />
+    <Compile Include="Data\produkt.cs" />
+    <Compile Include="Data\produkt_stav.cs" />
+    <Compile Include="Data\pruvodka.cs" />
+    <Compile Include="Data\role.cs" />
+    <Compile Include="Data\snimatelna_maska_typ.cs" />
+    <Compile Include="Data\splepe_vrtani_typ.cs" />
+    <Compile Include="Data\stav_objednavka.cs" />
+    <Compile Include="Data\svatky.cs" />
+    <Compile Include="Data\termin_typ.cs" />
+    <Compile Include="Data\termin_typ_id.cs" />
+    <Compile Include="Data\uzivatel.cs" />
+    <Compile Include="Data\veta.cs" />
+    <Compile Include="Data\vrtani_cu.cs" />
+    <Compile Include="Methods\nabidka_polozka.cs" />
+    <Compile Include="Methods\objendavka_polozka.cs" />
+    <Compile Include="Methods\plosny_spoj_specifikace.cs" />
+    <Compile Include="Methods\prevodStarySystem.cs" />
+    <Compile Include="Methods\produkt.cs" />
+    <Compile Include="Methods\seznam_operace.cs" />
+    <Compile Include="Methods\uzivatel.cs" />
+    <Compile Include="Methods\zakaznik.cs" />
+    <Compile Include="pcbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pcbModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Validation\faktura.cs" />
+    <Compile Include="Validation\Hlasky.cs" />
+    <Compile Include="Validation\kontakt.cs" />
+    <Compile Include="Validation\nabidka_polozka.cs" />
+    <Compile Include="Validation\objednavka_polozka.cs" />
+    <Compile Include="Validation\poznamka.cs" />
+    <Compile Include="Validation\produkt.cs" />
+    <Compile Include="Validation\role.cs" />
+    <Compile Include="Validation\uzivatel.cs" />
+    <Compile Include="Validation\zakaznik.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="pcbModel.Diagram1.view">
+      <DependentUpon>pcbModel.edml</DependentUpon>
+    </None>
+    <DevartEntityDeploy Include="pcbModel.edml">
+      <Generator>DevartEfGenerator</Generator>
+      <LastGenOutput>pcbModel.Designer.cs</LastGenOutput>
+    </DevartEntityDeploy>
+    <None Include="pcbModel.edps">
+      <DependentUpon>pcbModel.edml</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\PCB.Data.CustomObjects.KontrolaItem.datasource" />
+    <None Include="SQL\material.xlsx" />
+    <None Include="XLSx\cenik.xlsx" />
+    <None Include="XLSx\cernota.xlsx" />
+    <None Include="XLSx\operacepcb_vsechny.xlsx" />
+    <None Include="XLSx\prava.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQL\operace.sql" />
+    <Content Include="SQL\datacleaner.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
