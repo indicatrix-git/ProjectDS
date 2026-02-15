@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5ACA8A5-2D3F-4AAB-AB48-9844A8893FAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PCB.Report</RootNamespace>
+    <AssemblyName>PCB.Report</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FakturaReport.cs" />
+    <Compile Include="frmReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportView.Designer.cs">
+      <DependentUpon>frmReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObchodObjednavkyReport.cs" />
+    <Compile Include="ObchodNabidkyReport.cs" />
+    <Compile Include="ObjednavkaCenik.cs" />
+    <Compile Include="CenikReport.cs" />
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProduktReport.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportBuilder.cs" />
+    <Compile Include="reportPruvodkaHlavicka.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportPruvodkaHlavicka.Designer.cs">
+      <DependentUpon>reportPruvodkaHlavicka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportFaktura.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportFaktura.Designer.cs">
+      <DependentUpon>reportFaktura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportNabidkaPodrobnosti.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportNabidkaPodrobnosti.Designer.cs">
+      <DependentUpon>reportNabidkaPodrobnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportNabidkaHlavicka.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportNabidkaHlavicka.Designer.cs">
+      <DependentUpon>reportNabidkaHlavicka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportPruvodkaOperace.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportPruvodkaOperace.Designer.cs">
+      <DependentUpon>reportPruvodkaOperace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPVReport.cs" />
+    <Compile Include="VyrobaReport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmReportView.resx">
+      <DependentUpon>frmReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportPruvodkaHlavicka.resx">
+      <DependentUpon>reportPruvodkaHlavicka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportFaktura.resx">
+      <DependentUpon>reportFaktura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportNabidkaPodrobnosti.resx">
+      <DependentUpon>reportNabidkaPodrobnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportNabidkaHlavicka.resx">
+      <DependentUpon>reportNabidkaHlavicka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportPruvodkaOperace.resx">
+      <DependentUpon>reportPruvodkaOperace.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PCB.Data\PCB.Data.csproj">
+      <Project>{ba308acf-fc2e-4035-905e-4ff5a1ce2d47}</Project>
+      <Name>PCB.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\pcb_develModel.bankovni_ucet.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.barva.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.cena_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.cenik.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.cenik_hodnota.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.cenik_polozka+Value.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.cenik_polozka.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.doprava.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.dph.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.faktura.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.faktura_kooperace_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.faktura_polozka+fakturaPolozkaTyp.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.faktura_polozka.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.faktura_polozka_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.faktura_stav.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.faktura_tpv_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.film.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.film_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.kapacita.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.klice.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.kontakt.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.laser_druh.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.laser_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.material.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.motiv_cu.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.mozni_objednavatele.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.mustky.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.nabidka.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.nabidka_polozka.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.nabidka_stav.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.neshoda.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.neshoda_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.objednavka.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.objednavka_polozka.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.oddeleni.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.operace.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.operace_oprava.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.orientace_vrtani.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.oznaceni_fp_druh.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.oznaceni_fp_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.pcb_develEntities.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.plosny_spoj_druh.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.plosny_spoj_specifikace.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.postup.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.postup_operace.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.poznamka.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.poznamka_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.prava+Value.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.prava.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.prava_hodnota+Value.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.prava_hodnota.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.prava_role.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.prava_uzivatel.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.priorita.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.produkt.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.produkt_postup.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.produkt_poznamka.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.produkt_stav.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.pruvodka.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.pruvodka_odepisovani.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.pruvodka_stav.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.role.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.sablona_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.skryte_vrtani.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.slepe_vrtani_druh.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.slepe_vrtani_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.smd_typ_id.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.snimatelna_maska_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.soubor_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.soubor_typ_frezovani.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.specialni_postup.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.stav_objednavka.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.svatky.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.termin_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.uhrada_typ.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.uzivatel.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.uzivatel_oddeleni.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.veta.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.vrstva.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.vrstva_cu.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.vrtani_cu.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.zakaznik.datasource" />
+    <None Include="Properties\DataSources\pcb_develModel.zmena.datasource" />
+    <None Include="Template\ObchodNabidkyReport.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ObchodObjednavkyReport.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\produkt.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\cena.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\VyrobaReportSmall.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\VyrobaReport.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ReportASVNeshody.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ReportASVOpravy.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\TPVReport.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
